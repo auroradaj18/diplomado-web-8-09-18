@@ -1,23 +1,44 @@
 <!doctype html>
-<html lang="es"> 
+<html lang="es">
 
 <!--El atributo "lang" sirve para definir el lenguaje de la pagina-->
 
-	<head>
-		<meta charset="utf-8" />
-		<title> Untitled Document</title>
-	<head/>
-		
-	<body>
-	<div>
-		<header>
-			<h1>encabezado nivel 1</h1>
-			<!--<h2>encabezado nivel 2</h2>
+<head>
+<meta charset="utf-8" />
+<title>Ejercicio 1</title>
+<!--
+CSS: Hojas de estilo en cascada.
+Se pueden hacer 3 formas de estilizar el html
+    1.- En linea (inline) esto es no recomendado (directamente en la etiqueta html mediante un atributo nombre del atributo"el valor del atributo" ejemplo: style="color:#f00) (se debe usar en hexadecimal siempre colores)
+    2.- En el documento HTML en un bloque <style>. no es recomendado pero aceptable
+    adentro de head utilizando la etiqueta de <style>
+    p:last-child { ------esto es cuando se le da al ultimo texto de cada parrafo
+        color: #00f;
+    }
+    </style>todo lo que esta dentro sera lo que se va a dar el color
+    3.- Es un documento independiente (Recomendado)
+    -->
+    <!--<style>
+    p:last-child { 
+        color: #00f;
+    }
+    </style>
+    para combinar el css se escribe como el ejemplo de abajo-->
+    <link rel="stylesheet" href="css/main.css" />
+    
+
+</head>
+
+<body>
+<div class="container" />
+    <header>
+        <h1>Ejercicio 1</h1>
+        <!--<h2>encabezado nivel 2</h2>
 			<h3>encabezado nivel 3</h3>
 			<h4>encabezado nivel 4</h4>
 			<h5>encabezado nivel 5</h5>
-			<h6>encabezado nivel 6</h6>-->
-			<!--
+			<h6>encabezado nivel 6</h6>--> 
+        <!--
 			Título de un libro: El amor en los tiempos del cólera -> "h1"
 			Capítulo 1: Florentino  -> "h2"
 				subcapítulo 1.1 -> "h3"
@@ -29,40 +50,113 @@
 				subcapítulo 2.2 -> "h3"
 				subcapítulo 2.3 -> "h3"
 			Capítulo 3: Lo que sea -> "h2"
-			-->
-			<!--Rutas relativas: para entrar a una carpeta usamos "/"
-			para salir de una carpeta usamos ".." -->
-			
-			<!--
-			la ruta se traza desde el archivo raiz hasta la carpeta donde esta la imagen-->
-			<img src="images/header.jpg" alt="" />
-		</header>
-		<nav>
-		<!--
+			--> 
+        <!--Rutas relativas: para entrar a una carpeta usamos "/"
+			para salir de una carpeta usamos ".." --> 
+        
+        <!--
+			la ruta se traza desde el archivo raiz hasta la carpeta donde esta la imagen--> 
+        <img src="images/header.jpg" alt="" /> </header>
+    <nav> 
+        <!--
 		ul (Unordered List)Lista desordenada
 		ol (Ordered List)	lista desordenada
-		li (List element) Elemento de lista  -->
-	<!--El atributo target="_blank" sirve para abrir la pagina en una nueva pestaña (tab).-->
-	<ul>
-		<li>
-		  <a href="#" >Inicio</a>
-	</li>
-		
-		<li><a href="#"> Servicios</a></li>
-		<li> <a href="#">Productos</a></li>
-		<li> <a href="#">Galería</a></li>
-		<li><a href="#"> Contacto</a></li>
-		
-	</ul>
-	<ol>
+		li (List element) Elemento de lista  --> 
+        <!--El atributo target="_blank" sirve para abrir la pagina en una nueva pestaña (tab).-->
+        <ul>
+            <li> <a href="#init" >Inicio</a> </li>
+            <li><a href="#services"> Servicios</a></li>
+            <li> <a href="#products">Productos</a></li>
+            <li> <a href="#gallery">Galería</a></li>
+            <li><a href="#contact"> Contacto</a></li>
+        </ul>
+        <!--	<ol>
 		<li> Opción 1</li>
 		<li> Opción 2</li>
 		<li> Opción 3</li>
 		
-	</ol>
-		</nav>
-		<main></main>
-		<footer></footer>
-	</div>
-	</body>
+	</ol>--> 
+    </nav>
+    <main>
+        <section id="init">
+            <h2>Inicio</h2>
+            <img src="images/imag1.jpg" alt="" />  
+            
+            <a href="#">Elemento en linea 1</a>
+            <a href="#">Elemento en linea 2</a>
+            <p>lorem ipsum dolor. <p/>
+            <a href="#">Elemento en linea 3</a>
+            
+    <!--        /*un elemento en linea podemos darle un comportamiento de bloque con : "display:block"
+          un elemento en bloque podemos darle comportmiento de linea con: "display: inline"
+           "*/-->
+             <p id="verde" class="azul">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam soluta vel ipsum, molestiae, labore fugiat eius. Debitis laboriosam at accusantium quam qui harum, eaque, odit nesciunt doloribus mollitia quibusdam, ad.</p>
+            <p class="azul">Minima dolore tenetur autem quo voluptatem, veniam sed distinctio, sint temporibus explicabo aut suscipit! Consectetur sed sapiente eius laboriosam ut magni qui aliquid iste culpa ipsum, quae dicta recusandae natus.</p>
+        </section>
+        
+        <section id="services" class="section section-services">
+            <h2>Servicios</h2>
+            <img src="images/imag3.jpg" alt="" />  
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione non numquam porro modi id eum pariatur, veniam in ex dolorum illo, mollitia, quidem iure soluta. Harum nostrum, voluptatum repellat facilis.</p>
+            <p>Quod minima, explicabo dolor corporis odit iste, quasi ut accusamus, dolore incidunt illum perferendis sed? Illum ex, dolores, nesciunt totam ratione animi. Eligendi quia, dolorem ullam dolore repellendus pariatur soluta.</p>
+        </section>
+        <section id="products">
+            <h2>Productos</h2>
+              <img src="images/imag4.jpg" alt="" /> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, doloribus eos voluptas. Neque aut minima totam maiores. Ipsa quasi voluptatem, molestias error repudiandae, at est dignissimos laborum, odit aut ea.</p>
+            <p>Ullam facilis, enim ratione eligendi. Odio tempore soluta nam? A doloribus reiciendis expedita modi ipsum. Odit, rem unde fuga, maiores magni nisi doloremque, tempore a eos adipisci porro accusamus alias.</p>
+        </section>
+        <section id="gallery">
+            <h2>Galeria</h2>
+              <img src="images/imag5.jpg" alt="" /> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, tenetur omnis labore sapiente quod beatae, nemo repellendus porro cupiditate, veniam pariatur accusantium voluptatibus dolores? Quas nam expedita quo in ipsa!</p>
+            <p>Error optio modi explicabo ipsum, officia repudiandae pariatur blanditiis ducimus tempore beatae, nemo aspernatur, natus a qui. Aperiam totam expedita magnam, omnis autem minus quia dolorem reprehenderit ratione illum, deserunt.</p>
+        </section>
+        <section id="contact">
+            <h2>Contacto</h2>
+              <img src="images/imag2.jpeg" alt="" /> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa nemo, beatae ipsam, quasi minus cupiditate ad facilis quae voluptas consectetur sunt non quam dolore possimus et quod voluptatem deserunt odit.</p>
+            <p>Expedita rerum iure, architecto. Laudantium libero sed veniam asperiores temporibus voluptate explicabo, reiciendis incidunt culpa deserunt odit dicta consectetur, nobis atque excepturi unde deleniti vitae iusto aperiam commodi quod, iure.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados | eduMac 2018 | Aurora</p>
+    </footer>
+</div>
+
+<!--
+    Reglas y convenciones del atributo "id"
+        Reglas:
+        1.- No espacios
+        2.- No caracteres especiales
+        3.- No guion bajo
+        
+        Convenciones:
+        -Siempre inglés
+        -Formato CamelCase-LowerCase: 
+        iniciales de cada palabra mayuscula
+        - CamelCase-LowerCase ejemplos:
+            sectionServices
+            mySpace
+            MySectionServices
+            
+            (-CamelCase-UpperCase: SectionServices) esto no solo es referencia
+            
+            Reglas y convenciones del atributo "class"
+        Reglas:
+        1.- No espacios
+        2.- No caracteres especiales
+        3.- No guion bajo
+        
+        Convenciones:
+            -Siempre inglés
+            -Siempre minusculas y palabras separadas con "-" guion medio
+            ejemplos:
+              section-services
+            my-space
+            My-section-services
+            
+            
+  !-->          
+</body>
 </html>

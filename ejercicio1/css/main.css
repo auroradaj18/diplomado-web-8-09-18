@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/*
+Sintaxis de reglas CSS (a que contendio y cual es la regla
+primero se necesita un 
+selector: que va a indicar al navegador cual va a ser el elemento a modificar
+lista de propiedades: Propiedades que se modifican (texto, color de fuente, borde etc.)
+Valor que tipo de color que borde que tipo de fuente etc.
+    selector {
+        
+        nombre-propiedad: valor;
+        color: #f00;
+        font-family:arial;
+        font-size: 30 px;
+}
+
+Selectores básicos:
+        1. Etiqueta (solo el nombre a la etiqueta a la cual se va a afectar)solo escribir el nombre de la etiqueta sin >< si es tipo parrafo solo p
+        2: Clase: Se utilizan mediante el atributo "class" sirve principalmente para añadir estilo CSS  a un determinado elemento. Estas si se pueden repetir. 
+sintaxis del selector: un signo de punto "." como prefijo del valor del atributo.
+        3: Identificador: se utiliza mediante el atributo "id" sirve principalmente para añadir comportmiento Java Script a un determinado elemento. estas no se pueden repetir, si se utilizan selectores desde cero nunca se ponga id.
+
+sintaxis del selector: un signo de punto "." como prefijo del valor del atributo.
+
+Selector por etiqueta
+*/
+/*P {
+    Color: #f00;    
+}*/
+/*Selector por clase:*/
+
+/*.azul {
+    color: #00f;
+}
+
+/* Selector por Id*/
+/*#verde {
+    color: #00f;
+}-->*/
+body {
+    font-family: arial;
+   /* font-size: 16px;*/
+    color: #333;
+    margin: 0;
+}
+    .container {
+        width: 1200px;   
+        margin: 0 auto;
+    }
+/*Elementos de bloque se centran con margen (margin) automático a la izquierda y margen automatico a la derecha
+Elementos en linea se centran con la propiedad "text-align" */
+h1 {
+    color: #C0039B;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+nav ul {
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+nav li:first-child{
+    margin-left: 0;
+}
+nav a {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #DC9FA0;
+}
+nav a:hover{
+    text-decoration: underline;
+    color: #BE7475;
+}
+/* Propiedades del modelo de cajas:
+    -background: popiedad general (establecer el valor de las siguientes propiedades)
+            -background-color: un valor hexadecimal
+            -background-image: url de la imagen
+            -background-repeat: [repeat | no-repeat]
+            -background-attachment: [scroll | fixed]
+            -background-position: recibe dos valores
+                Posición X: [left | center | right | px]
+                Posición Y: [top | center | bottom | px]
+
+    -border: añadir bordes
+        -ancho del border en pixeles
+        -Estilo del borde: en [solid, double] etc.
+        -Color del borde: en hexadecimal
+    -padding: (relleno) para establecer un espacio entre el borde y los contenidos
+    puede recibir de uno a cuatro valores
+*****este valor se puede hacer a padding o margin****
+            --1 valor: se aplica a los 4 lados
+            --2 valores:  
+                -1er valor: top
+                -2do valor:left/right
+                -3er valor: bottom
+            --4 valores:
+                -1er valor: top
+                -2do valor:left/right
+                -3er valor: bottom
+                -4to valor: left */
+/*En cuanto a padding las propiedades especificas son:
+            -padding-top
+            -padding-right
+            -padding-bottom
+            -padding-left
+*/
+
+/*    -margin: Para establecer un espacio entre el border y otros elementos.
+                   -width: valor en [ px | % | em]
+                   -height: valor en [ px | % | em]
+
+/*En cuanto a margin las propiedades especificas son:
+            -margin-top
+            -margin-right
+            -margin-bottom
+            -margin-left
+   
+*/
+.section-services {
+    /*background: #FBD308 url(../images/header.jpg) no-repeat center center fixed;*/
+    
+    /*background-image: url(../images/header.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;background-attachment: fixed;*/  
+    border: 1px solid #f0f;
+    padding: 10px;
+    margin: 10px
+        
+
+}
+/*selectores decendientes, deben cumplir con la regl : nav ul son selectores con la cual especifica a cual elemento vas a afectar en este caso al ultimo "nav ul li" */
+
+/*El valor 
+    200 -> Think 
+    300 ->light
+    400 ->(normal)
+    600 ->semibold
+    700 ->bold
+    800 ->black
+    900 ->extra black
+*/
+main h2 {
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #9A5455;
+    
+}
+main img{
+    max-width: 300px;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 5px #897;
+}
